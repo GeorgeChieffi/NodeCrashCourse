@@ -1,10 +1,34 @@
-// https://nodejs.org/dist/latest-v16.x/docs/api/
-// ^Shows all node.js core modules for the current version 16.14.2
+const http = require('http');
+const path = require('path')
+const fs = require('fs');
 
+const server = http.createServer( (req, res) => {
+    if(req.url === '/') {
+        fs.readFile(path.join(__dirname, 'public', 'index.html'), (err, content) => {
+            if(err) throw err;
+            res.writeHead(200, { 'Content-Type': 'text/html'})
+            res.end(content);
+        })
+    }
+    if(req.url === '/about') {
+        fs.readFile(path.join(__dirname, 'public', 'about.html'), (err, content) => {
+            if(err) throw err;
+            res.writeHead(200, { 'Content-Type': 'text/html'})
+            res.end(content);
+        })
+    }
 
-const Logger = require('./logger');
-const logger = new Logger();
+    if(req.url === '/api/users') {
+        const users = [
+            { name: 'John Doe', age: 40 },
+            { name: 'Jane Doe', age: 34 }
+        ]
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify(users));
+    }
+    
+});
 
-logger.on('message', (data) => console.log('Called Listener: ', data));
+const PORT = process.env.PORT || 5000;
 
-logger.log('Hello World');
+server.listen(PORT, () => console.log(`Server running on port ${PORT}`));

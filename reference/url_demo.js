@@ -27,3 +27,7 @@ console.log(myUrl.searchParams);
 
 // Loop through params
 myUrl.searchParams.forEach( (value, name) => console.log(`${name}: ${value}`));
+
+
+// https://nodejs.org/dist/latest-v16.x/docs/api/
+// ^Shows all node.js core modules for the current version 16.14.2
