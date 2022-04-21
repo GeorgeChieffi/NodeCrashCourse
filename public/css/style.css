@@ -1,4 +1,12 @@
-body {
-    background: #333;
-    color: white;
+body{
+    background-color: #333;
+    color:white;
+}
+
+div{
+    background-color: white;
+    color: #333;
+    text-align: center;
+    height: 40px;
+    font-size: 20px;
 }
