@@ -1,0 +1,82 @@
+html{
+    background-color: lightslategray;
+}
+body{
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Gill Sans", sans-serif;
+    font-size: 1.2em;
+    color: lightslategray;
+    padding: 10px;
+    padding-top: 0;
+}
+
+.sequence{
+    font-family: "Lucida Console", Courier, monospace;
+}
+
+h1{
+    font-size: 3em;
+    color:#FF2C00;
+}
+aside h1{
+    font-size: 1.2em;
+    margin-top:0px;
+}
+
+h2{
+    font-size: 1.5em;
+    color: #FF8500;
+}
+aside h2{
+    font-size: 1em;
+}
+
+h3{
+    font-size: 1.2em;
+    color: #00B945;
+}
+
+a{
+    color: skyblue;
+    text-decoration: none;
+}
+nav a{
+    font-weight: bold;
+    color: #0776A0;
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0;
+}
+nav li {
+    display: inline;
+}
+
+aside ul{
+    line-height: 1.8em;
+    list-style-type: square;
+    color: #FF8500;
+}
+ul.body-list{
+    list-style-position: inside;
+    list-style-image: url('../pics/small_arrow.png');
+    line-height: 1.8em;
+}
+
+.quote p{
+    font-style: italic;
+}
+
+aside{
+    float: left;
+    width: 380px;
+    margin-right: 20px;
+    margin-bottom: 15px;
+    background-color: #D0D0D0;
+    padding: 5px;
+    border: 1px solid black;
+}
